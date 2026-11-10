@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria Patitas Felices - Reserva de Citas</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-paw"></i> Patitas Felices
+            </a>
+            <nav>
+                <a href="#servicios">Servicios</a>
+                <a href="#veterinarios">Veterinarios</a>
+                <a href="#reserva" class="nav-btn">Reservar Cita</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Cuidado con amor para tu mejor amigo</h1>
+            <p>Agenda una consulta médica, baño o vacuna de manera rápida y sin saturar nuestras líneas telefónicas.</p>
+            <a href="#reserva" class="btn-primary">Apartar una Cita</a>
+        </div>
+    </section>
+
+    <!-- Contenido Principal -->
+    <main class="main-container">
+        
+        <!-- Sección de Servicios -->
+        <section id="servicios" class="section">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-subtitle">Atención integral y profesional para tu mascota</p>
+            <div class="service-grid" id="service-grid">
+                <!-- Dinámico vía script.js -->
+            </div>
+        </section>
+
+        <!-- Sección de Veterinarios -->
+        <section id="veterinarios" class="section">
+            <h2 class="section-title">Nuestros Especialistas</h2>
+            <p class="section-subtitle">Conoce al equipo médico encargado del bienestar animal</p>
+            <div class="vet-grid" id="vet-grid">
+                <!-- Dinámico vía script.js -->
+            </div>
+        </section>
+
+        <!-- Sección de Formulario de Reserva -->
+        <section id="reserva" class="section">
+            <div class="booking-card">
+                <h2 class="section-title">Reserva tu Turno</h2>
+                <p class="section-subtitle">Selecciona fecha, hora y servicio de preferencia</p>
+                
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label for="owner-name"><i class="fa-solid fa-user"></i> Nombre del Propietario</label>
+                        <input type="text" id="owner-name" required placeholder="Ej. Juan Pérez">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pet-name"><i class="fa-solid fa-dog"></i> Nombre de la Mascota</label>
+                        <input type="text" id="pet-name" required placeholder="Ej. Firulais">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service-select"><i class="fa-solid fa-stethoscope"></i> Servicio Requerido</label>
+                        <select id="service-select" required></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vet-select"><i class="fa-solid fa-user-doctor"></i> Veterinario de Preferencia</label>
+                        <select id="vet-select" required></select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="appointment-date"><i class="fa-solid fa-calendar"></i> Fecha</label>
+                            <input type="date" id="appointment-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="appointment-time"><i class="fa-solid fa-clock"></i> Hora</label>
+                            <input type="time" id="appointment-time" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-confirm">Confirmar Cita</button>
+                </form>
+
+                <!-- Mensaje de éxito oculto inicialmente -->
+                <div id="success-message" class="hidden">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h3>¡Cita Registrada con Éxito!</h3>
+                    <p id="success-details"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Clínica Veterinaria Patitas Felices - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JavaScript Externo -->
+    <script src="script.js"></script>
+</body>
+</html>
